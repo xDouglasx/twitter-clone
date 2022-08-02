@@ -18,10 +18,10 @@ const { defaultTransition } = useTailwindConfig()
   </div>
 
   <div class="mt-2 space-y-3">
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <HomeIcon />        
+              <home-icon />        
             </div>
           </template>
 
@@ -30,12 +30,12 @@ const { defaultTransition } = useTailwindConfig()
               Home
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
 
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <HashtagIcon />        
+              <hashtag-icon />        
             </div>
           </template>
 
@@ -44,12 +44,12 @@ const { defaultTransition } = useTailwindConfig()
               Explore
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
 
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <BellIcon />        
+              <bell-icon />        
             </div>
           </template>
 
@@ -58,12 +58,12 @@ const { defaultTransition } = useTailwindConfig()
               Notifications
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
 
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <InboxIcon />        
+              <inbox-icon />        
             </div>
           </template>
 
@@ -72,12 +72,12 @@ const { defaultTransition } = useTailwindConfig()
               Messages
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
 
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <BookmarkIcon />        
+              <bookmark-icon />        
             </div>
           </template>
 
@@ -86,12 +86,12 @@ const { defaultTransition } = useTailwindConfig()
               Bookmarks
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
 
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <DocumentTextIcon />        
+              <document-text-icon />        
             </div>
           </template>
 
@@ -100,12 +100,12 @@ const { defaultTransition } = useTailwindConfig()
               List
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
 
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <UserIcon />        
+              <user-icon />        
             </div>
           </template>
 
@@ -114,12 +114,12 @@ const { defaultTransition } = useTailwindConfig()
               Profile
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
 
-        <SidebarLeftTab active>
+        <sidebar-left-tab active>
           <template v-slot:icon>
             <div>
-              <DotsCircleHorizontalIcon />        
+              <dots-circle-horizontal-icon />        
             </div>
           </template>
 
@@ -128,7 +128,7 @@ const { defaultTransition } = useTailwindConfig()
               More
             </div>
           </template>  
-        </SidebarLeftTab>
+        </sidebar-left-tab>
   </div>
 
   
