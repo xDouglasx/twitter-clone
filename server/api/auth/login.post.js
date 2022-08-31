@@ -1,7 +1,7 @@
 import { getUserByUsername } from "../../db/users"
 import bcrypt from 'bcrypt'
-import { generateTokens } from "~~/server/utils/jwt"
-import { createRefreshToken } from "~~/server/db/refreshToken"
+import { generateTokens, sendRefreshToken } from "~~/server/utils/jwt"
+import { createRefreshToken } from "~~/server/db/refreshTokens"
 import { userTransformer } from "~~/server/transformers/user"
 import { sendError } from "h3"
 
@@ -41,7 +41,7 @@ export default defineEventHandler(async (event) => {
     //Save it inside db
     await createRefreshToken({
         token: refreshToken,
-        user: user.id
+        userId: user.id
     })
 
     //add http only cookie
