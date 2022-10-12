@@ -3,17 +3,15 @@
 
 generator client {
   provider = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
-  provider = "mongodb"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
 }
 
 model User {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+  id Int @id @default(autoincrement())
   email String
   name String?
   username String @unique
@@ -26,12 +24,12 @@ model User {
 }
 
 model RefreshToken {
-  id String @id @default(auto()) @map("_id") @db.ObjectId
+  id Int @id @default(autoincrement())
   token String @unique
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  userId String @db.ObjectId
+  userId Int
   user User @relation(fields: [userId], references: [id])
 }

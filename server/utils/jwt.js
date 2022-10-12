@@ -28,10 +28,33 @@ export const generateTokens = (user) => {
 
 }
 
+export const decodeRefreshToken = (token) => {
+    const config = useRuntimeConfig()
+
+    try {
+        return jwt.verify(token, config.jwtRefreshSecret)
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
+
 export const sendRefreshToken = (event, token) => {
     setCookie(event.res, "refresh_token", token, {
         httpOnly: true,
         sameSite: true
 
     })
+}
+
+export const decodeAccessToken = (token) => {
+    const config = useRuntimeConfig()
+    console.log(config.jwtAccessSecret)
+
+    try {
+        return jwt.verify(token, config.jwtAccessSecret)
+    } catch (error) {
+        console.log(error)
+        return null
+    }
 }
